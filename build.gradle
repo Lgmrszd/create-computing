@@ -142,6 +142,10 @@ repositories {
     //     dir 'libs'
     // }
 
+    maven {
+        name = 'tterrag maven'
+        url = 'https://maven.tterrag.com/'
+    }
 
     maven {
         url 'https://www.cursemaven.com'
@@ -155,10 +159,13 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.10'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.60'
 
-    implementation fg.deobf("curse.maven:create-328085:3872145")
-    implementation fg.deobf("curse.maven:flywheel-486392:3871082")
+//    implementation fg.deobf("curse.maven:create-328085:3872145")
+//    implementation fg.deobf("curse.maven:flywheel-486392:3871082")
+    implementation fg.deobf("com.simibubi.create:create-1.18.2:${create_version}:all") { transitive = false }
+    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-1.18.2:${flywheel_version}")
+    compileOnly fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
     implementation fg.deobf("curse.maven:cc-tweaked-282001:3709268")
     implementation fg.deobf("curse.maven:jade-324717:3865918")
     // Real mod deobf dependency examples - these get remapped to your current mappings

@@ -1,7 +1,7 @@
 package de.saschat.createcomputing;
 
 import com.simibubi.create.content.logistics.trains.management.edgePoint.TrackTargetingBlockItem;
-import com.simibubi.create.repack.registrate.util.nullness.NonNullBiFunction;
+import com.tterrag.registrate.util.nullness.NonNullBiFunction;
 import de.saschat.createcomputing.blocks.ComputerizedDisplaySourceBlock;
 import de.saschat.createcomputing.blocks.ComputerizedDisplayTargetBlock;
 import de.saschat.createcomputing.blocks.ComputerizedRedstoneLinkBlock;
